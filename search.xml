@@ -10,9 +10,9 @@
 
     
     <entry>
-      <title><![CDATA[如何使用github和hexo搭建个人博客]]></title>
+      <title><![CDATA[生活：缘何是github]]></title>
       <url>%2F2017%2F02%2F10%2F20170210%2F</url>
-      <content type="text"><![CDATA[网上有很多关于github搭建个人博客的教程。但是本人小白一枚，希望自己把搭建过程重新记录一遍，算是对自己知识积累的一个过程。Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. 说明：你有一个github账号，进入官网https://github.com/ 开始搭建步骤11$ hexo new "My New Post" ``` More info: Deployment]]></content>
+      <content type="text"><![CDATA[从QQ空间到微博从微信到知乎 总缺了那么点自己的东西 趁着实习空闲时间利用现有知识和万能搜索引擎Baidu 和 Googlegithub 和 hexo 成为我心头之好 ####鲁迅先生说：时间就像海绵，挤挤就有了。 从网络工程到web前端从成都学习到宁波实习 总少了一份自己的执着 在自己的blog写下学习的点点滴滴生活的喜怒哀乐成长路上总该有个记录与归属…]]></content>
     </entry>
 
     
