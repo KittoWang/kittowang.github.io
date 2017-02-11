@@ -108,7 +108,7 @@
 <meta property="og:image" content="http://img.blog.csdn.net/20170211142117105?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQva2l0dG93YW5n/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20170211142348920?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQva2l0dG93YW5n/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20170211144456726?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQva2l0dG93YW5n/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2017-02-11T08:41:30.023Z">
+<meta property="og:updated_time" content="2017-02-11T08:43:39.976Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="收获：如何使用github和hexo搭建个人博客">
 <meta name="twitter:description" content="网上有很多关于github搭建个人博客的教程。但是本人小白一枚，希望自己把搭建过程重新记录一遍，算是对自己知识积累的一个过程。
@@ -443,7 +443,7 @@
 <p>我们试试在浏览器打开看看</p>
 <p><img src="http://img.blog.csdn.net/20170211142348920?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQva2l0dG93YW5n/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="本地运行Hexo效果图"></p>
 <p>我们已经成功在本地运行hexo博客了。但是这个只能在本地看到。我们希望的是可以跟github连接起来，让他人看到。</p>
-<p>说明：Hexo使用命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ hexo init &lt;folder&gt;  <span class="comment">#执行init命令初始化hexo到你指定的目录</span></div><div class="line"></div><div class="line">$ hexo generate       <span class="comment">#自动根据当前目录下文件,生成静态网页</span></div><div class="line"></div><div class="line">$ hexo server         <span class="comment">#运行本地服务</span></div></pre></td></tr></table></figure></p>
+<p>说明：Hexo使用命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo init &lt;folder&gt;  <span class="comment">#执行init命令初始化hexo到你指定的目录</span></div><div class="line">$ hexo generate       <span class="comment">#自动根据当前目录下文件,生成静态网页</span></div><div class="line">$ hexo server         <span class="comment">#运行本地服务</span></div></pre></td></tr></table></figure></p>
 <h3 id="github部分"><a href="#github部分" class="headerlink" title="github部分"></a>github部分</h3><h4 id="1-创建仓库"><a href="#1-创建仓库" class="headerlink" title="1.创建仓库"></a>1.创建仓库</h4><p>新建一个名为你的用户名.github.io的仓库，比如说，如果你的github用户名是test，那么你就新建test.github.io的仓库（必须是你的用户名，其它名称无效），将来你的网站访问地址就是 <a href="http://test.github.io" target="_blank" rel="external">http://test.github.io</a> 了，是不是很方便？</p>
 <p>由此可见，每一个github账户最多只能创建一个这样可以直接使用域名访问的仓库。</p>
 <p><img src="http://img.blog.csdn.net/20170211144456726?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQva2l0dG93YW5n/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="创建github仓库"></p>
@@ -451,9 +451,9 @@
 <h4 id="3-域名解析"><a href="#3-域名解析" class="headerlink" title="3.域名解析"></a>3.域名解析</h4><p>想要进一步让自己的博客看起来很博客，就用自己的域名。</p>
 <p><a href="http://blog.csdn.net/chwshuang/article/details/52350589" target="_blank" rel="external">github域名解析，酷酷哒</a></p>
 <h3 id="部署部分"><a href="#部署部分" class="headerlink" title="部署部分"></a>部署部分</h3><p>编辑 _config.yml (在 E:\hexo 下)。你在部署时，要把下面的kittowang 都换成你的账号名。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line"></div><div class="line"> <span class="built_in">type</span>:  git</div><div class="line"></div><div class="line"> repo: git@github.com:KittoWang/kittowang.github.io.git</div><div class="line"></div><div class="line"> branch: master</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line"> <span class="built_in">type</span>:  git</div><div class="line"> repo: git@github.com:KittoWang/kittowang.github.io.git</div><div class="line"> branch: master</div></pre></td></tr></table></figure>
 <p>执行下列指令即可完成部署</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">$ hexo generate       <span class="comment">#自动根据当前目录下文件,生成静态网页</span></div><div class="line"></div><div class="line">$ hexo server         <span class="comment">#运行本地服务</span></div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo generate       <span class="comment">#自动根据当前目录下文件,生成静态网页</span></div><div class="line">$ hexo server         <span class="comment">#运行本地服务</span></div></pre></td></tr></table></figure>
 <p>记住：每次修改本地文件后，都需要hexo generate才能保存。每次使用命令时，都要在E:\hexo目录下。</p>
 <p>OK,我们的博客已经完全搭建起来了，在浏览器访问：kittowang.github.io就可以看到你的成就。</p>
 
