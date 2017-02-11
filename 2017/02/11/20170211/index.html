@@ -108,7 +108,7 @@
 <meta property="og:image" content="http://img.blog.csdn.net/20170211142117105?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQva2l0dG93YW5n/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20170211142348920?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQva2l0dG93YW5n/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20170211144456726?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQva2l0dG93YW5n/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2017-02-11T08:45:15.384Z">
+<meta property="og:updated_time" content="2017-02-11T08:53:15.470Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="收获：如何使用github和hexo搭建个人博客">
 <meta name="twitter:description" content="网上有很多关于github搭建个人博客的教程。但是本人小白一枚，希望自己把搭建过程重新记录一遍，算是对自己知识积累的一个过程。
@@ -437,7 +437,9 @@
 <p>打开E:\hexo文件夹，我们可以看到hexo下已发生改变，存在了网站建立所需要的所有文件。</p>
 <p><img src="http://img.blog.csdn.net/20170211140755067?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQva2l0dG93YW5n/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="hexo文件目录"></p>
 <h4 id="3-安装依赖"><a href="#3-安装依赖" class="headerlink" title="3.安装依赖"></a>3.安装依赖</h4><p>依旧回到git bash。现在我们 <strong>安装依赖</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$ npm install</div><div class="line"></div><div class="line">``` </div><div class="line"></div><div class="line">通过hexo命令</div><div class="line"></div><div class="line">``` bash</div><div class="line">$ hexo s  <span class="comment">#运行本地服务器</span></div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install</div></pre></td></tr></table></figure>
+<p>通过hexo命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo s  <span class="comment">#运行本地服务器</span></div></pre></td></tr></table></figure>
 <p>可以看到</p>
 <p><img src="http://img.blog.csdn.net/20170211142117105?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQva2l0dG93YW5n/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="本地运行hexo"></p>
 <p>我们试试在浏览器打开看看</p>
@@ -451,7 +453,7 @@
 <h4 id="3-域名解析"><a href="#3-域名解析" class="headerlink" title="3.域名解析"></a>3.域名解析</h4><p>想要进一步让自己的博客看起来很博客，就用自己的域名。</p>
 <p><a href="http://blog.csdn.net/chwshuang/article/details/52350589" target="_blank" rel="external">github域名解析，酷酷哒</a></p>
 <h3 id="部署部分"><a href="#部署部分" class="headerlink" title="部署部分"></a>部署部分</h3><p>编辑 _config.yml (在 E:\hexo 下)。你在部署时，要把下面的kittowang 都换成你的账号名。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line"> <span class="built_in">type</span>:  git</div><div class="line"> repo: git@github.com:KittoWang/kittowang.github.io.git</div><div class="line"> branch: master</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line"> <span class="built_in">type</span>: git</div><div class="line"> repo: git@github.com:KittoWang/kittowang.github.io.git</div><div class="line"> branch: master</div></pre></td></tr></table></figure>
 <p>执行下列指令即可完成部署</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo generate       <span class="comment">#自动根据当前目录下文件,生成静态网页</span></div><div class="line">$ hexo server         <span class="comment">#运行本地服务</span></div></pre></td></tr></table></figure>
 <p>记住：每次修改本地文件后，都需要hexo generate才能保存。每次使用命令时，都要在E:\hexo目录下。</p>
