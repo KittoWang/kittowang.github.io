@@ -3,22 +3,22 @@
   
     
     <entry>
-      <title><![CDATA[Hello World]]></title>
-      <url>%2F2017%2F02%2F11%2Fhello-world%2F</url>
-      <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+      <title><![CDATA[收获：如何对github中的个人博客进行备份]]></title>
+      <url>%2F2017%2F02%2F20%2F20170220%2F</url>
+      <content type="text"><![CDATA[利用github完成个人博客之后，想要把我的blog进行备份。为的是换了电脑，依然可以更新blog或者想重新发布以前的blog。查看了网上很多资料，总结一下，大致两个方法，基本大同小异。 方法一：github新建仓库BlogBackup备份github创建新仓库BlogBackup点击“create repository”按钮，成功创建一个新的git仓库 本地仓库内容推送到BlogBackup仓库使用git bash 输入以下命令1$ git remote add origin http://github.com/KittoWang/BlogBackUp.git 请把上面的kittowang替换为自己的github账户，否则模拟在本地关联的就是我的远程库。 本地库内容推送到远程库上1$ git push -u origin master 1$ git push -u origin master 由于远程库是空的，我们第一次推送master分支时，加上 -u 参数,Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。 现在起，只需做本地提交1$ git push origin master 方法二：利用原有github仓库创建分支进行备份找到本地目录(例如 E:\blog)，使用git bash 创建分支hexo1$ git branch hexo 也可以使用一下方式创建分支1$ git checkout -b hexo 切换分支的命令,从hexo分支切换至master1$ git checkout master 现在我们还是回到hexo分支1$ git checkout hexo 查看所有分支命令1$ git branch git branch可以查看当前已有的分支信息，并在将当前所在分支高亮，当前分支前还有个*号。 若要删除某个分支，可以使用以下命令1$ git branch -d hexo 这个时候刷新github博客，我们将看到两个branches, 点击个人blog仓库下的settings,并修改默认分支为hexo 将本地仓库推送至分支hexo必须保证，现在是在分支hexo下进行操作1$ git add.//将工作区的文件提交至暂存区(提交新文件(new)和被修改(modified)文件，不包括被删除(deleted)文件) 1$ git commit -m "提交的描述信息"//将暂存区的所有文件提交至当前分支 1$ git push origin //使用push 命令，将文件推送到github上 可以看到github上内容 网站的静态页面，我们将放到master分支上。因为_config.yml上的deploy 为master，我们使用以下命令的时候，我们写的blog会自动放到master上1$ hexo g //生成静态文件 1$ hexo d //部署 现在我们已经备份完毕了。赶紧试试吧。]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[收获：如何使用github和hexo搭建个人博客]]></title>
-      <url>%2F2017%2F02%2F11%2F20170211%2F</url>
+      <url>%2F2017%2F02%2F20%2F20170211%2F</url>
       <content type="text"><![CDATA[网上有很多关于github搭建个人博客的教程。但是本人小白一枚，希望自己把搭建过程重新记录一遍，算是对自己知识积累的一个过程。 一:环境准备1.你有一个 github 账号，如果没有，进入官网 github，注册。 2.你还得安装了 nodejs ,如果没有，进入官网 node.js ，选择对应版本安装 3.你还得记得把 Git 安装了，如果还没有，下载msysgit 并执行即可完成安装。 我们此次安装的前提就是以上 三者 都已存在。 二:开始搭建hexo部分1.安装hexo利用npm命令安装。（在任意位置点击鼠标右击，选择Git bash） 1$ npm install -g hexo #-g表示全局安装，npm默认为当前项目安装 2.创建hexo文件夹现在选择一个喜欢的文件夹（如:E:\hexo）,执行以下操作（在H:\hexo内点击鼠标右键，选择 Git Bash），hexo会自动在目标文件夹下简历网站所需要的所有文件。 1$ hexo init 打开E:\hexo文件夹，我们可以看到hexo下已发生改变，存在了网站建立所需要的所有文件。 3.安装依赖依旧回到git bash。现在我们 安装依赖 1$ npm install 通过hexo命令 1$ hexo s #运行本地服务器 可以看到 我们试试在浏览器打开看看 我们已经成功在本地运行hexo博客了。但是这个只能在本地看到。我们希望的是可以跟github连接起来，让他人看到。 说明：Hexo使用命令123$ hexo init &lt;folder&gt; #执行init命令初始化hexo到你指定的目录$ hexo generate #自动根据当前目录下文件,生成静态网页$ hexo server #运行本地服务 github部分1.创建仓库新建一个名为你的用户名.github.io的仓库，比如说，如果你的github用户名是test，那么你就新建test.github.io的仓库（必须是你的用户名，其它名称无效），将来你的网站访问地址就是 http://test.github.io 了，是不是很方便？ 由此可见，每一个github账户最多只能创建一个这样可以直接使用域名访问的仓库。 2.github设置添加sshgithub设置添加ssh请看此博文 3.域名解析想要进一步让自己的博客看起来很博客，就用自己的域名。 github域名解析，酷酷哒 部署部分编辑 _config.yml (在 E:\hexo 下)。你在部署时，要把下面的kittowang 都换成你的账号名。 1234deploy: type: git repo: git@github.com:KittoWang/kittowang.github.io.git branch: master 执行下列指令即可完成部署 12$ hexo generate #自动根据当前目录下文件,生成静态网页$ hexo server #运行本地服务 记住：每次修改本地文件后，都需要hexo generate才能保存。每次使用命令时，都要在E:\hexo目录下。 OK,我们的博客已经完全搭建起来了，在浏览器访问：kittowang.github.io就可以看到你的成就。]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[生活：缘何有博]]></title>
-      <url>%2F2017%2F02%2F10%2F20170210%2F</url>
+      <url>%2F2017%2F02%2F20%2F20170210%2F</url>
       <content type="text"><![CDATA[从QQ空间到微博从微信到知乎 总缺了那么点自己的东西 趁着实习空闲时间利用现有知识和万能搜索引擎Baidu 和 Google github 和 hexo 成为我心头之好 鲁迅先生说：时间就像海绵，挤挤就有了。 从网络工程到web前端从成都学习到宁波实习 总少了一份自己的执着 在自己的blog写下学习的点点滴滴生活的喜怒哀乐成长路上总该有个记录与归属…]]></content>
     </entry>
 
