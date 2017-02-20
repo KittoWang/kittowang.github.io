@@ -1,6 +1,7 @@
 ---
 title: 关于我
 date: 2017-02-09 15:38:12
+comments: false
 ---
 ##关于我
 
